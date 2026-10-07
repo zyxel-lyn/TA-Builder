@@ -26,21 +26,21 @@ Fokus utama aplikasi:
 
 ## Latest release
 
-### TA Builder v1.1.0
+### TA Builder v1.1.1
 
 **Windows x64**
 
-[Download TA-Builder-v1.1.0-Windows-x64.zip](https://github.com/zyxel-lyn/TA-Builder/releases/download/v1.1.0/TA-Builder-v1.1.0-Windows-x64.zip)
+[Download TA-Builder-v1.1.1-Windows-x64.zip](https://github.com/zyxel-lyn/TA-Builder/releases/download/v1.1.1/TA-Builder-v1.1.1-Windows-x64.zip)
 
 SHA-256:
 
 ```text
-F16D9D310323CCA486941954F6A1633CBD7B09ADA90690803A8284A4282C9D9A
+5C4DFC9C97DE8D8AB098C342C8BC4A688FA0F084394DA3274A83386074940BAD
 ```
 
 Release page:
 
-https://github.com/zyxel-lyn/TA-Builder/releases/tag/v1.1.0
+https://github.com/zyxel-lyn/TA-Builder/releases/tag/v1.1.1
 
 ## Installation
 
@@ -83,19 +83,16 @@ Set-ExecutionPolicy -Scope Process Bypass
 
 Review the script before running it if you prefer to audit every installation step.
 
-## v1.1.0 highlights
+## v1.1.1 hotfix highlights
 
-- Add, rename, and delete BAB.
-- Add/delete subbab, subsubbab, and appendices.
-- At least one BAB is always retained.
-- Proposal and Final Report are no longer locked to a fixed chapter count.
-- Customized structures are preserved when moving into Final Report.
-- Lembar Pengesahan is optional and stored per project.
-- Legacy projects remain compatible.
-- Cover student name underline; NPM plain.
-- Pengesahan student identity plain; supervisor/coordinator names underline; NIP plain.
-- Kata Pengantar closing identity generated consistently.
-- Preview, DOCX, PDF, recovery, project integrity, and update-in-place validated.
+- Fixes Create Project failures seen on another Windows laptop at the Confirmation step.
+- Project destination is now selected explicitly before Create Project is enabled.
+- Final `.pa-project` path is visible before project creation.
+- ProductShell pickers use the Windows App SDK picker contract consistently for create/open/import/export/backup/restore flows.
+- Safe project-path planning prevents overwrite and sanitizes generated filenames.
+- Packaged cross-machine create, physical file creation, close, Recent Projects, and reopen were verified on the affected laptop.
+- `.pa-project` schema and package identity remain compatible with v1.1.0.
+- This hotfix does not change the academic document-format model; it is focused on cross-machine reliability.
 
 ## Product flow
 
@@ -122,14 +119,14 @@ That separation keeps the public download surface small while preventing interna
 
 Download both:
 
-- `TA-Builder-v1.1.0-Windows-x64.zip`
+- `TA-Builder-v1.1.1-Windows-x64.zip`
 - `SHA256SUMS.txt`
 
 Then run:
 
 ```powershell
 .\scripts\Verify-TA-Builder.ps1 \
-  -ZipPath .\TA-Builder-v1.1.0-Windows-x64.zip \
+  -ZipPath .\TA-Builder-v1.1.1-Windows-x64.zip \
   -ChecksumsPath .\SHA256SUMS.txt
 ```
 
