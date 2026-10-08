@@ -26,21 +26,21 @@ Fokus utama aplikasi:
 
 ## Latest release
 
-### TA Builder v1.1.1
+### TA Builder v1.1.2
 
 **Windows x64**
 
-[Download TA-Builder-v1.1.1-Windows-x64.zip](https://github.com/zyxel-lyn/TA-Builder/releases/download/v1.1.1/TA-Builder-v1.1.1-Windows-x64.zip)
+[Download TA-Builder-v1.1.2-Windows-x64.zip](https://github.com/zyxel-lyn/TA-Builder/releases/download/v1.1.2/TA-Builder-v1.1.2-Windows-x64.zip)
 
 SHA-256:
 
 ```text
-5C4DFC9C97DE8D8AB098C342C8BC4A688FA0F084394DA3274A83386074940BAD
+57B29BD8B138A7847FE85867D89CEE8CBF810642BC6035CF9193598EEF83838C
 ```
 
 Release page:
 
-https://github.com/zyxel-lyn/TA-Builder/releases/tag/v1.1.1
+https://github.com/zyxel-lyn/TA-Builder/releases/tag/v1.1.2
 
 ## Installation
 
@@ -83,16 +83,16 @@ Set-ExecutionPolicy -Scope Process Bypass
 
 Review the script before running it if you prefer to audit every installation step.
 
-## v1.1.1 hotfix highlights
+## v1.1.2 highlights
 
-- Fixes Create Project failures seen on another Windows laptop at the Confirmation step.
-- Project destination is now selected explicitly before Create Project is enabled.
-- Final `.pa-project` path is visible before project creation.
-- ProductShell pickers use the Windows App SDK picker contract consistently for create/open/import/export/backup/restore flows.
-- Safe project-path planning prevents overwrite and sanitizes generated filenames.
-- Packaged cross-machine create, physical file creation, close, Recent Projects, and reopen were verified on the affected laptop.
-- `.pa-project` schema and package identity remain compatible with v1.1.0.
-- This hotfix does not change the academic document-format model; it is focused on cross-machine reliability.
+- Canonical front-matter order: Cover → Pengesahan (when enabled) → Kata Pengantar → Daftar Isi → Daftar Gambar → Daftar Tabel → BAB I.
+- Daftar Gambar is always generated, including documents with no figures yet.
+- Daftar Tabel is always generated, including documents with no tables yet.
+- PDF and Preview always include Daftar Gambar and Daftar Tabel in Daftar Isi.
+- DOCX keeps native Word TOC and native caption-index fields so page numbers can be refreshed in Microsoft Word.
+- Fresh Microsoft Word runtime verification confirmed Daftar Gambar on page v, Daftar Tabel on page vi, and BAB I restarting at Arabic page 1.
+- DOCX, PDF, and Preview front-matter ordering are validated together.
+- `.pa-project` schema, ProjectId semantics, academic workflow, and package identity remain compatible with v1.1.1.
 
 ## Product flow
 
@@ -119,14 +119,14 @@ That separation keeps the public download surface small while preventing interna
 
 Download both:
 
-- `TA-Builder-v1.1.1-Windows-x64.zip`
+- `TA-Builder-v1.1.2-Windows-x64.zip`
 - `SHA256SUMS.txt`
 
 Then run:
 
 ```powershell
 .\scripts\Verify-TA-Builder.ps1 \
-  -ZipPath .\TA-Builder-v1.1.1-Windows-x64.zip \
+  -ZipPath .\TA-Builder-v1.1.2-Windows-x64.zip \
   -ChecksumsPath .\SHA256SUMS.txt
 ```
 
