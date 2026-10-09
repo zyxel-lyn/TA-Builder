@@ -10,19 +10,19 @@ TA Builder is distributed as a signed MSIX inside a ZIP bundle.
    https://github.com/zyxel-lyn/TA-Builder/releases/latest
 
 2. Download:
-   - `TA-Builder-v1.1.2-Windows-x64.zip`
+   - `TA-Builder-v1.1.3-Windows-x64.zip`
    - `SHA256SUMS.txt`
 
 3. Verify the ZIP:
 
 ```powershell
-Get-FileHash .\TA-Builder-v1.1.2-Windows-x64.zip -Algorithm SHA256
+Get-FileHash .\TA-Builder-v1.1.3-Windows-x64.zip -Algorithm SHA256
 ```
 
-Expected SHA-256 for v1.1.2:
+Expected SHA-256 for v1.1.3:
 
 ```text
-57B29BD8B138A7847FE85867D89CEE8CBF810642BC6035CF9193598EEF83838C
+D3D1C1D70F947F0207F728082BF760AB1FB89B5300B4D7F4ECA672A94BA5896F
 ```
 
 4. Extract the ZIP.

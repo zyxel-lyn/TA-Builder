@@ -26,21 +26,21 @@ Fokus utama aplikasi:
 
 ## Latest release
 
-### TA Builder v1.1.2
+### TA Builder v1.1.3
 
 **Windows x64**
 
-[Download TA-Builder-v1.1.2-Windows-x64.zip](https://github.com/zyxel-lyn/TA-Builder/releases/download/v1.1.2/TA-Builder-v1.1.2-Windows-x64.zip)
+[Download TA-Builder-v1.1.3-Windows-x64.zip](https://github.com/zyxel-lyn/TA-Builder/releases/download/v1.1.3/TA-Builder-v1.1.3-Windows-x64.zip)
 
 SHA-256:
 
 ```text
-57B29BD8B138A7847FE85867D89CEE8CBF810642BC6035CF9193598EEF83838C
+D3D1C1D70F947F0207F728082BF760AB1FB89B5300B4D7F4ECA672A94BA5896F
 ```
 
 Release page:
 
-https://github.com/zyxel-lyn/TA-Builder/releases/tag/v1.1.2
+https://github.com/zyxel-lyn/TA-Builder/releases/tag/v1.1.3
 
 ## Installation
 
@@ -83,16 +83,15 @@ Set-ExecutionPolicy -Scope Process Bypass
 
 Review the script before running it if you prefer to audit every installation step.
 
-## v1.1.2 highlights
+## v1.1.3 highlights
 
-- Canonical front-matter order: Cover → Pengesahan (when enabled) → Kata Pengantar → Daftar Isi → Daftar Gambar → Daftar Tabel → BAB I.
-- Daftar Gambar is always generated, including documents with no figures yet.
-- Daftar Tabel is always generated, including documents with no tables yet.
-- PDF and Preview always include Daftar Gambar and Daftar Tabel in Daftar Isi.
-- DOCX keeps native Word TOC and native caption-index fields so page numbers can be refreshed in Microsoft Word.
-- Fresh Microsoft Word runtime verification confirmed Daftar Gambar on page v, Daftar Tabel on page vi, and BAB I restarting at Arabic page 1.
-- DOCX, PDF, and Preview front-matter ordering are validated together.
-- `.pa-project` schema, ProjectId semantics, academic workflow, and package identity remain compatible with v1.1.1.
+- Kata Pengantar closing block now keeps exactly one full blank line between the Banda Aceh/date line and the student name.
+- Student name underline and NPM line remain unchanged.
+- The spacing contract is identical in DOCX and PDF/Preview.
+- Fresh Microsoft Word runtime validation confirmed two line breaks after the location/date, producing one visual blank line.
+- PDF layout extraction independently confirmed: date line → empty line → student name → NPM.
+- v1.1.2 canonical front-matter order, Daftar Isi, Daftar Gambar, and Daftar Tabel behavior remain intact.
+- `.pa-project` schema, ProjectId semantics, academic workflow, and package identity remain compatible.
 
 ## Product flow
 
@@ -119,14 +118,14 @@ That separation keeps the public download surface small while preventing interna
 
 Download both:
 
-- `TA-Builder-v1.1.2-Windows-x64.zip`
+- `TA-Builder-v1.1.3-Windows-x64.zip`
 - `SHA256SUMS.txt`
 
 Then run:
 
 ```powershell
 .\scripts\Verify-TA-Builder.ps1 \
-  -ZipPath .\TA-Builder-v1.1.2-Windows-x64.zip \
+  -ZipPath .\TA-Builder-v1.1.3-Windows-x64.zip \
   -ChecksumsPath .\SHA256SUMS.txt
 ```
 
